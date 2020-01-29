@@ -1,0 +1,19 @@
+///* logo */
+///***********************************************/
+.logo {
+  $self: &;
+
+  &__box {
+    @include ext(
+      mb-6
+      pt-1
+      font-light
+    );
+  }
+
+  &__title {
+    @include ext(
+      pt-1
+    );
+  }
+}
