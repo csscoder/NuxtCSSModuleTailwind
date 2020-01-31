@@ -61,6 +61,18 @@ export default {
   build: {
     cssSourceMap: false,
     extractCSS: !isDevelopment,
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.(css|scss|vue)$/,
+            chunks: 'all',
+            enforce: true
+          }
+        }
+      }
+    },
     loaders: {
       cssModules: {
         modules: isDevelopment
@@ -69,6 +81,10 @@ export default {
               localIdentName: '_[hash:base64:4]'
             }
       }
+    },
+    optimizeCSS: {
+      cssProcessor: require('css-mqpacker'),
+      cssProcessorPluginOptions: { sort: true }
     }
   },
 
