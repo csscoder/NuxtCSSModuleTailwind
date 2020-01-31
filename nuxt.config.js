@@ -5,7 +5,6 @@ const isDevelopment = process.env.NODE_ENV === 'development'
 const baseUrl = isDevelopment ? '/' : packageData.project.baseURL
 
 const scssResources = ['~/assets/scss/_mix.scss']
-scssResources.push('~/assets/scss/_tailwind.scss')
 
 export default {
   cache: false,
@@ -39,7 +38,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/css/_tailwind.css'],
+  css: [],
   /*
    ** Plugins to load before mounting the App
    */
@@ -54,25 +53,49 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/style-resources', 'nuxt-purgecss'],
+  modules: ['@nuxtjs/style-resources'],
+  buildModules: ['@nuxtjs/tailwindcss'],
+
   /*
    ** Build configuration
    */
   build: {
     cssSourceMap: false,
     extractCSS: !isDevelopment,
-    loaders: {
-      cssModules: {
-        modules: isDevelopment
-          ? false
-          : {
-              localIdentName: '_[hash:base64:4]'
-            }
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.(css|scss|vue)$/,
+            chunks: 'all',
+            enforce: true
+          }
+        }
       }
     }
   },
 
-  purgeCSS: {
-    mode: 'postcss'
+  // purgeCSS: {
+  //   mode: 'postcss'
+  // }
+
+  postcss: {
+    plugins: {
+      cssnano: {
+        preset: [
+          'default',
+          {
+            discardComments: {
+              removeAll: true
+            }
+          }
+        ]
+      }
+    }
+  },
+  optimizeCSS: {
+    cssProcessor: require('css-mqpacker'),
+    cssProcessorPluginOptions: { sort: true }
   }
 }

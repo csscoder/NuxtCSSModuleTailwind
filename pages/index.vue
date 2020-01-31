@@ -1,54 +1,54 @@
 <template>
-  <div class="bg-gray-900 h-full md-min-h-screen">
-    <div class="container mx-auto py-24 px-10">
-      <div class="text-white text-center text-4xl font-semibold mb-8">
+  <div class="page">
+    <div class="page__box">
+      <div class="page__title">
         Choose a right plan for you
       </div>
-      <ul class="flex max-w-3xl mx-auto items-center">
-        <li class="flex-1 -mr-1">
-          <div
-            class="text-center text-lg block py-4 px-4 bg-gray-700 rounded text-white"
-          >
+
+      <ul class="price-period">
+        <li class="price-period__item">
+          <div class="price-period__item-note">
             Annually
           </div>
         </li>
-        <li class="flex-1 z-20">
-          <div
-            class="text-center text-lg block py-6 px-5 bg-purple-500 shadow rounded text-white"
-          >
+        <li class="price-period__item price-period__item--featured">
+          <div class="price-period__item-note">
             Monthly
           </div>
         </li>
-        <li class="flex-1 -ml-1">
-          <div
-            class="text-center text-lg block py-4 px-4 bg-gray-700 rounded text-white"
-          >
+        <li class="price-period__item">
+          <div class="price-period__item-note">
             Yearly
           </div>
         </li>
       </ul>
-      <div class="flex flex-wrap max-w-5xl mx-auto mt-24">
-        <div class="w-full md-w-1/3 px-6 mb-6 md-mb-0">
-          <div class="bg-gray-700 shadow">
-            <div class="text-center text-white py-4 uppercase font-semibold">
+
+      <div class="price">
+        <div class="price__item">
+          <div class="price__item-box">
+            <div class="price__item-title">
               basic
             </div>
-            <div class="flex mx-8 items-center">
-              <div class="w-1/3">
-                <div class="border-b border-gray-600"></div>
+
+            <div class="price__coast">
+              <div class="price__coast-col">
+                <div class="price__coast-decor"></div>
               </div>
-              <div class="w-1/3">
-                <div class="text-white text-center text-4xl">$10</div>
+              <div class="price__coast-col">
+                <div class="price__coast-title">$10</div>
               </div>
-              <div class="w-1/3">
-                <div class="border-b border-gray-600"></div>
+              <div class="price__coast-col">
+                <div class="price__coast-decor"></div>
               </div>
             </div>
-            <div class="text-center text-gray-500 my-2">Storage 15 GB</div>
-            <div class="text-center text-gray-500 my-2">Transfer no limits</div>
-            <div class="text-center text-gray-500 my-2">Database 10/2</div>
-            <div class="border-b border-gray-600 mx-8 my-3"></div>
-            <div class="text-center text-gray-500 my-2">
+
+            <div class="price__note">Storage 15 GB</div>
+            <div class="price__note">Transfer no limits</div>
+            <div class="price__note">Database 10/2</div>
+
+            <div class="price__hr"></div>
+
+            <div class="price__note">
               SSL Certificate
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,13 +60,13 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="feather text-red-500 inline-block feather-x"
+                class="price__note-ico price__note-ico--red"
               >
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </div>
-            <div class="text-center text-gray-500 my-2">
+            <div class="price__note">
               SSH Access
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -78,38 +78,41 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="feather text-red-500 inline-block feather-x"
+                class="price__note-ico price__note-ico--red"
               >
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </div>
-            <button class="text-white text-base bg-gray-800 w-full py-3 mt-3">
-              GET STARTED
-            </button>
+            <button class="price__button">GET STARTED</button>
           </div>
         </div>
-        <div class="w-full md-w-1/3 px-6 mb-6 md-mb-0">
-          <div class="bg-gray-700 relative overflow-hidden">
-            <div class="text-center text-white py-4 uppercase font-semibold">
+
+        <div class="price__item">
+          <div class="price__item-box">
+            <div class="price__item-title">
               standard
             </div>
-            <div class="flex mx-8 items-center">
-              <div class="w-1/3">
-                <div class="border-b border-gray-600"></div>
+
+            <div class="price__coast">
+              <div class="price__coast-col">
+                <div class="price__coast-decor"></div>
               </div>
-              <div class="w-1/3">
-                <div class="text-white text-center text-4xl">$15</div>
+              <div class="price__coast-col">
+                <div class="price__coast-title">$15</div>
               </div>
-              <div class="w-1/3">
-                <div class="border-b border-gray-600"></div>
+              <div class="price__coast-col">
+                <div class="price__coast-decor"></div>
               </div>
             </div>
-            <div class="text-center text-gray-500 my-2">Storage 15 GB</div>
-            <div class="text-center text-gray-500 my-2">Transfer no limits</div>
-            <div class="text-center text-gray-500 my-2">Database 10/2</div>
-            <div class="border-b border-gray-600 mx-8 my-3"></div>
-            <div class="text-center text-gray-500 my-2">
+
+            <div class="price__note">Storage 15 GB</div>
+            <div class="price__note">Transfer no limits</div>
+            <div class="price__note">Database 10/2</div>
+
+            <div class="price__hr"></div>
+
+            <div class="price__note">
               SSL Certificate
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -121,16 +124,16 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="feather text-red-500 inline-block feather-x"
+                class="price__note-ico price__note-ico--red"
               >
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </div>
-            <div class="text-center text-gray-500 my-2">
+            <div class="price__note">
               SSH Access
               <svg
-                class="fill-current text-green-500 inline-block"
+                class="price__note-ico price__note-ico--green"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -141,16 +144,14 @@
                 />
               </svg>
             </div>
-            <button class="text-white text-base bg-purple-500 w-full py-3 mt-3">
+            <button class="price__button price__button--featured">
               GET STARTED
             </button>
-            <div
-              class="absolute right-0 top-0 -mt-3 -mr-8 h-12 w-20 bg-purple-500 shadow-lg"
-              style="transform: rotate(45deg);"
-            >
-              <div class="flex justify-center mt-6">
+
+            <div class="price__featured">
+              <div class="price__featured-box">
                 <svg
-                  class="fill-current text-white"
+                  class="price__featured-ico"
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
@@ -164,30 +165,35 @@
             </div>
           </div>
         </div>
-        <div class="w-full md-w-1/3 px-6 mb-6 md-mb-0">
-          <div class="bg-gray-700">
-            <div class="text-center text-white py-4 uppercase font-semibold">
+
+        <div class="price__item">
+          <div class="price__item-box">
+            <div class="price__item-title">
               professional
             </div>
-            <div class="flex mx-8 items-center">
-              <div class="w-1/3">
-                <div class="border-b border-gray-600"></div>
+
+            <div class="price__coast">
+              <div class="price__coast-col">
+                <div class="price__coast-decor"></div>
               </div>
-              <div class="w-1/3">
-                <div class="text-white text-center text-4xl">$25</div>
+              <div class="price__coast-col">
+                <div class="price__coast-title">$25</div>
               </div>
-              <div class="w-1/3">
-                <div class="border-b border-gray-600"></div>
+              <div class="price__coast-col">
+                <div class="price__coast-decor"></div>
               </div>
             </div>
-            <div class="text-center text-gray-500 my-2">Storage 15 GB</div>
-            <div class="text-center text-gray-500 my-2">Transfer no limits</div>
-            <div class="text-center text-gray-500 my-2">Database 10/2</div>
-            <div class="border-b border-gray-600 mx-8 my-3"></div>
-            <div class="text-center text-gray-500 my-2">
+
+            <div class="price__note">Storage 15 GB</div>
+            <div class="price__note">Transfer no limits</div>
+            <div class="price__note">Database 10/2</div>
+
+            <div class="price__hr"></div>
+
+            <div class="price__note">
               SSL Certificate
               <svg
-                class="fill-current text-green-500 inline-block"
+                class="price__note-ico price__note-ico--green"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -198,10 +204,10 @@
                 />
               </svg>
             </div>
-            <div class="text-center text-gray-500 my-2">
+            <div class="price__note">
               SSH Access
               <svg
-                class="fill-current text-green-500 inline-block"
+                class="price__note-ico price__note-ico--green"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -212,25 +218,19 @@
                 />
               </svg>
             </div>
-            <button class="text-white text-base bg-gray-800 w-full py-3 mt-3">
-              GET STARTED
-            </button>
+            <button class="price__button">GET STARTED</button>
           </div>
         </div>
       </div>
     </div>
-    <div class="text-center py-4 px-16 text-gray-400">
+    <div class="copyright">
       Designed by
-      <a
-        href="#"
-        class="text-purple-500 border-b-2 hover:text-purple-700 border-purple-400"
-        >Shyamol Jyoti</a
-      >
+      <a href="#" class="copyright__link">Shyamol Jyoti</a>
       || TailwindCSS || From dribbble shot
       <a
         href="https://dribbble.com/shots/9247376-Pricing-plan"
         target="_blank"
-        class="text-purple-500 border-b-2 border-purple-400 hover:text-purple-700"
+        class="copyright__link"
         >Pricing Plan</a
       >
     </div>
@@ -242,3 +242,5 @@ export default {
   components: {}
 }
 </script>
+
+<style lang="scss" src="./_index.scss"></style>

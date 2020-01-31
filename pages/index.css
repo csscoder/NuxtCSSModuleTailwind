@@ -1,0 +1,3 @@
+.page {
+  @apply bg-gray-900 h-full md:min-h-screen;
+}
