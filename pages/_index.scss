@@ -1,76 +1,320 @@
-@import '../assets/css/tailwind';
-
-.container2 {
+.page {
   @include ext(
-    bg-gray-400
-    lg-bg-gray-600
-    flex
-    flex-col
-    justify-center
-    items-center
-    min-h-screen
-    mx-auto
-    my-0
-  );
-}
-
-.title {
-  @include ext(
-    flex
-    font-light
-    text-center
-    lg-text-6xl
-    text-4xl
-    text-blue-100
-    tracking-wide
-  );
-}
-
-.box {
-  @include ext(
-    max-w-sm
-    mx-auto
-    flex
-    p-6
-    bg-white
-    rounded-lg
-    shadow-xl
+    bg-gray-900
+    h-full
+    md-min-h-screen
   );
 
-  &__logo {
+  &__box {
     @include ext(
-      flex-shrink-0
+      container
+      mx-auto
+      py-24
+      px-10
     );
-
-    &-img {
-      @include ext(
-        h-12
-        w-12
-      );
-    }
   }
 
-  &__main {
+  &__title {
     @include ext(
-      ml-6
-      pt-1
+      text-white
+      text-center
+      text-4xl
+      font-semibold
+      mb-8
+    );
+  }
+}
+
+.price-period {
+  @include ext(
+    flex
+    max-w-3xl
+    mx-auto
+    items-center
+  );
+
+  &__item {
+    $selfItem: &;
+    @include ext(
+      flex-1
+      -mr-1
     );
 
-    &-title {
+    &--featured {
       @include ext(
-        lg-text-2xl
-        text-xl
-        text-gray-900
-        leading-tight
+        z-20
       );
+
+      #{$selfItem}-note {
+        @include ext(
+          py-6
+          px-5
+          bg-purple-500
+          shadow
+        );
+      }
     }
 
     &-note {
       @include ext(
-        text-base
-        text-gray-600
-        leading-normal
+        text-center
+        text-lg
+        block
+        py-4
+        px-4
+        bg-gray-700
+        rounded
+        text-white
       );
     }
   }
 }
+
+.price {
+  @include ext(
+    flex
+    flex-wrap
+    max-w-5xl
+    mx-auto
+    mt-24
+  );
+
+  &__item {
+    @include ext(
+      w-full
+      md-w-1\/3
+      px-6
+      mb-6
+      md-mb-0
+    );
+
+    &-box {
+      @include ext(
+        bg-gray-700
+        shadow
+        relative
+        overflow-hidden
+      );
+    }
+
+    &-title {
+      @include ext(
+        text-center
+        text-white
+        py-4
+        uppercase
+        font-semibold
+      );
+    }
+  }
+
+  &__coast {
+    @include ext(
+      flex
+      mx-8
+      items-center
+    );
+
+    &-col {
+      @include ext(
+        w-1\/3
+      );
+    }
+
+    &-decor {
+      @include ext(
+        border-b
+        border-gray-600
+      );
+    }
+
+    &-title {
+      @include ext(
+        text-white
+        text-center
+        text-4xl
+      );
+    }
+  }
+
+  &__note {
+    @include ext(
+      text-center
+      text-gray-500
+      my-2
+    );
+
+    &-ico {
+      @include ext(
+        fill-current
+        inline-block
+      );
+
+      &--green {
+        @include ext(
+          text-green-500
+        );
+      }
+
+      &--red {
+        @include ext(
+          text-red-500
+        );
+      }
+    }
+
+  }
+
+  &__hr {
+    @include ext(
+      border-b
+      border-gray-600
+      mx-8
+      my-3
+    );
+  }
+
+  &__button {
+    @include ext(
+      text-white
+      text-base
+      bg-gray-800
+      w-full
+      py-3
+      mt-3
+    );
+
+    &--featured {
+      @include ext(
+        bg-purple-500
+      );
+    }
+  }
+
+  &__featured {
+    @include ext(
+      absolute
+      right-0
+      top-0
+      -mt-3
+      -mr-8
+      h-12
+      w-20
+      bg-purple-500
+      shadow-lg
+    );
+    transform: rotate(45deg);
+
+    &-box {
+      @include ext(
+        flex
+        justify-center
+        mt-6
+      );
+    }
+
+    &-ico {
+      @include ext(
+        fill-current
+        text-white
+      );
+    }
+
+
+  }
+
+
+}
+
+.copyright {
+  @include ext(
+    text-center
+    py-4
+    px-16
+    text-gray-400
+  );
+
+  &__link {
+    @include ext(
+      text-purple-500
+      border-b-2
+      hover-text-purple-700
+      border-purple-400
+    );
+  }
+}
+
+//.container2 {
+//  @include ext(
+//    bg-gray-400
+//    lg-bg-gray-600
+//    flex
+//    flex-col
+//    justify-center
+//    items-center
+//    min-h-screen
+//    mx-auto
+//    my-0
+//  );
+//}
+//
+//.title {
+//  @include ext(
+//    flex
+//    font-light
+//    text-center
+//    lg-text-6xl
+//    text-4xl
+//    text-blue-100
+//    tracking-wide
+//  );
+//}
+//
+//.box {
+//  @include ext(
+//    max-w-sm
+//    mx-auto
+//    flex
+//    p-6
+//    bg-white
+//    rounded-lg
+//    shadow-xl
+//  );
+//
+//  &__logo {
+//    @include ext(
+//      flex-shrink-0
+//    );
+//
+//    &-img {
+//      @include ext(
+//        h-12
+//        w-12
+//      );
+//    }
+//  }
+//
+//  &__main {
+//    @include ext(
+//      ml-6
+//      pt-1
+//    );
+//
+//    &-title {
+//      @include ext(
+//        lg-text-2xl
+//        text-xl
+//        text-gray-900
+//        leading-tight
+//      );
+//    }
+//
+//    &-note {
+//      @include ext(
+//        text-base
+//        text-gray-600
+//        leading-normal
+//      );
+//    }
+//  }
+//}
